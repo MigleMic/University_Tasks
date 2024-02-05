@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="lt">
+    <head>
+        <meta charset="utf-8">
+        <title>Interneto Technologijos 3</title>
+        <link rel="stylesheet" href="stilius.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <hgroup>
+                <h1 id="title">Knygynas</h1>
+            </hgroup>
+        </header>
+        <nav>
+            <a href="home.html">Pradžia</a>
+            <a href="about.html">Apie</a>
+            <a href="books.html">Knygos</a>
+            <a href="forma.html">Prisijungti</a>
+        </nav>
+        <section>
+            <h2>Registracijos forma</h2>
+            <form name="forma" id="forma" action="" method="post" novalidate>
+                Vardas: <input required type="text" name="vardas" id="name"><br>
+                <p id="popup-error">Įveskite vardą</p>
+
+                Pavardė: <input required type="text" name="pavardė" id="surname"><br>
+
+                Paštas <input required type="email" name="el. paštas" id="email"><br>
+
+                Amžius <input type="text" name="amzius" id="age"><br>
+                <p id="popup-error-age">Įveskite amžių</p>
+                Data <input type="text" name="data" id="date"><br>
+                <label>
+                    <input type="radio" name="lytis" value="V">Vyras
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="lytis" value="M">Moteris
+                </label>
+                <br>
+                Sutikti su taisyklėmis: <input required type="checkbox" id="check"><br>
+                <input type="button" value="Validuoti" id="validation" onclick="validateForm()"/>
+                <input type="button" value="Siųsti" id="submission"/>
+                <input type="reset" value="IŠvalyti">
+            </form>
+        </section>
+
+        <section>
+            <h2>Užpildyti duomenys:</h2>
+            <table>
+                <tr>
+                    <th rowspan="2">Vardas Pavardė</th>
+                    <th colspan="3">Pirkėjas</th>
+                </tr>
+                <tr>
+                    <th>Amžius</th>
+                    <th>El. Paštas</th>
+                    <th>Sutikimas</th>
+                </tr>
+            </table>
+        </section>
+
+    </body>
+</html>

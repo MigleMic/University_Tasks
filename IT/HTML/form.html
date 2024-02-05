@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="lt">
+    <head>
+        <meta charset="utf-8">
+        <title>Interneto Technologijos 3</title>
+        <link rel="stylesheet" href="stilius.css">
+    </head>
+
+    <body>
+        <header>
+            <hgroup>
+                <h1 id="title">Knygynas</h1>
+            </hgroup>
+        </header>
+        <nav>
+            <a href="home.html">Pradžia</a>
+            <a href="about.html">Apie</a>
+            <a href="books.html">Knygos</a>
+            <a href="form.html">Prisijungti</a>
+        </nav>
+        <section>
+            <h2>Registracijos forma</h2>
+            <form name="form" id="forma" method="post">
+                Vardas: <input required type="text" name="vardas" id="name"><br>
+                Pavardė: <input required type="text" name="pavardė" id="surname"><br>
+                Paštas <input required type="text" name="el. paštas" id="email"><br>
+                Amžius <input type="text" name="amzius" id="age"><br>
+                Data <input type="date" name="data" id="date"><br>
+                <label>
+                    <input type="radio" name="lytis" value="V">Vyras
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="lytis" value="M">Moteris
+                </label>
+                <br>
+                Sutikti su taisyklėmis: <input required type="checkbox" id="check"><br>
+                <input type="submit" value="Išsaugoti">
+                <input type="reset" value="IŠvalyti">
+            </form>
+        </section>
+    </body>
+</html>
