@@ -1,0 +1,231 @@
+{
+    "Bookstore": {
+      "authors": [
+          {
+            "id": "a1",
+            "firstname": "William",
+            "lastname": "Shakespeare",
+            "pseudonym": "null"
+          },
+          {
+            "id": "a2",
+            "firstname": "Stephen",
+            "lastname": "King",
+            "pseudonym": "null"
+          },
+          {
+            "id": "a3", 
+            "firstname": "Neil",
+            "lastname": "Gaiman",
+            "pseudonym": "null"
+          },
+          {
+            "id": "a4",
+            "firstname": "null",
+            "lastname": "null",
+            "pseudonym": "Mo Xiang Tong Xiu"
+          },
+          {
+            "id": "a5",
+            "firstname": "George R.R.",
+            "lastname": "Martin",
+            "pseudonym": "null"
+          }
+          ],
+      "books": [
+              {
+                "identifier" : "ISBN-13",
+                "isbn": "979-8651027460",
+                "name": "Macbeth",
+                "author": "a1",
+                "cover": "Paperback",
+                "details": {
+                  "genre": ["Drama", "Historical Fiction"],
+                  "pages": 108,
+                  "price": 9.99,
+                  "currency":"Euros",
+                  "amount": 5,
+                  "publicationdate": "2020-06-14"
+                }
+              },
+              {
+                "identifier" : "ISBN-13",
+                "isbn": "978-1774260395",
+                "name": "Hamlet",
+                "author": "a1",
+                "cover": "Paperback",
+                "details":{
+                  "genre": ["Drama", "Historical Fiction"],
+                  "pages": 172,
+                  "price": 8.55,
+                  "currency":"Euros",
+                  "amount": 15,
+                  "publicationdate": "2020-11-24"
+                }
+              },
+              {
+                "identifier" : "ISBN-13",
+                "isbn": "979-8651027460",
+                "name": "A Midsummer Night's Dream",
+                "author": "a1",
+                "cover": "Paperback",
+                "details":{
+                  "genre": ["Drama", "Fiction", "Fantasy"],
+                  "pages": 275,
+                  "price": 7.21,
+                  "currency":"Dollars",
+                  "amount": 20,
+                  "publicationdate": "2008-06-15"
+                }
+              },
+              {
+                "identifier" : "ISBN-13",
+                "isbn": "978-1444708158",
+                "name": "The Dark Half",
+                "author": "a2",
+                "cover": "Paperback",
+                "details":{
+                  "genre": ["Horror", "Thriller", "Fiction"],
+                  "pages": 480,
+                  "price": 9.79,
+                  "currency": "Euros",
+                  "amount": 6,
+                  "publicationdate": "2011-11-10"
+                }
+              },
+              {
+                "identifier" : "ISBN-13",
+                "isbn": "978-1982103521",
+                "name": "The Mist",
+                "author": "a2",
+                "cover": "Hard cover",
+                "details":{
+                  "genre": ["Horror", "Thriller", "Fiction"],
+                  "pages": 176,
+                  "price": 12.00,
+                  "currency": "Euros",
+                  "amount": 50,
+                  "publicationdate": "2018-06-05"
+                }
+              },
+              {
+                "identifier" : "ISBN-13",
+                "isbn": "978-1444720686",
+                "name": "Bag of Bones",
+                "author": "a2",
+                "cover": "Hard cover",
+                "details":{
+                  "genre": ["Horror", "Fiction", "Thriller"],
+                  "pages": 672,
+                  "price": 11.09,
+                  "currency": "Euros",
+                  "amount": 24,
+                  "publicationdate": "2011-08-04"
+                }
+              },
+              {
+                "identifier" : "ISBN-13",
+                "isbn": "978-0393356182",
+                "name": "Norse Mythology",
+                "author": "a3",
+                "cover": "Paperback",
+                "details":{
+                  "genre": ["Fantasy", "Myth"],
+                  "pages": 304,
+                  "price": 10.19,
+                  "currency":"Euros",
+                  "amount": 4,
+                  "publicationdate": "2018-03-06"
+                }
+              },
+              {
+                "identifier" : "ISBN-13",
+                "isbn":"978-1524796280",
+                "name": "Fire and Blood",
+                "author": "a5",
+                "cover": "Hard cover",
+                "details":{
+                  "genre": ["Fantasy", "Fiction"],
+                  "pages": 736,
+                  "price": 27.99,
+                  "currency": "Dollars",
+                  "amount": 5,
+                  "publicationdate": "2018-11-20"
+                }
+              },
+              {
+                "identifier" : "ISBN-13",
+                "isbn":"978-0553103540",
+                "name": "Game of Thrones",
+                "author": "a5",
+                "cover": "Hard cover",
+                "details":{
+                  "genre": ["Fantasy", "Fiction"],
+                  "pages": 694,
+                  "price": 31.49,
+                  "currency": "Dollars",
+                  "amount": 41,
+                  "publicationdate": "1996-08-01"
+                }
+              },
+              {
+                "identifier" : "ISBN-13",
+                "isbn":"978-1648279195",
+                "name": "Grandmaster of Demonic Cultivation",
+                "author": "a4",
+                "cover": "Paperback",
+                "details":{
+                  "genre": ["Fantasy", "Action"],
+                  "pages": 396,
+                  "price": 14.99,
+                  "currency": "Euros",
+                  "amount": 4,
+                  "publicationdate": "2021-12-14",
+                  "readingAgeLimit" :  {"limit" : "mature", "age" : 16}
+                }
+              },
+              {
+                "identifier" : "ISBN-13",
+                "isbn":"978-1648279171",
+                "name": "Heaven Official's Blessing",
+                "author": "a4",
+                "cover": "Paperback",
+                "details":{
+                  "genre": ["Fantasy", "Drama"],
+                  "pages": 432,
+                  "price": 14.99,
+                  "currency": "Euros",
+                  "amount": 0,
+                  "publicationdate": "2021-12-14",
+                  "readingAgeLimit" :  {"limit" : "mature", "age" : 16}
+                }
+                           },
+              {
+                "identifier" : "ISBN-13",
+                "isbn":"978-1648279218",
+                "name": "The Scum Villain's Self-Saving System",
+                "author": "a4",
+                "cover": "Paperback",
+                "details":{
+                  "genre": ["Fantasy", "Comedy"],
+                  "pages": 352,
+                  "price": 14.99,
+                  "currency": "Euros",
+                  "amount": 2,
+                  "publicationdate": "2021-12-14",
+                  "readingAgeLimit" :  {"limit" : "mature", "age" : 16}
+                }
+              },
+              {
+              "isbn":"978-1779515179",
+              "name": "The Sandman",
+              "author": "a3",
+              "cover": "Illustrated paperback",
+              "details":{
+                "price": 20.99,
+                "currency": "Euros"
+              }
+            }
+          ]
+      }
+}

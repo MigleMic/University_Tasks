@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bookstore xmlns="https://www.amazon.de"
+xsi:schemaLocation="https://www.amazon.de BookstoreSchema.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <authors>
+    <author id="a1">
+        <firstname>William</firstname>
+        <lastname>Shakespeare</lastname>
+        <dead>true</dead>
+    </author>
+    <author id="a2">
+        <firstname>Stephen</firstname>
+        <lastname>King</lastname>
+    </author>
+    <author id="a3">
+        <firstname>Neil</firstname>
+        <lastname>Gaiman</lastname>
+    </author>
+    <author id="a4">
+        <pseudonym>Mo Xiang Tong Xiu</pseudonym>
+    </author>
+    <author id="a5">
+        <firstname>George R.R.</firstname>
+        <lastname>Martin</lastname>
+    </author>
+ </authors>
+ <books>
+    <book>
+        <isbn identifier="ISBN-13">979-8651027460</isbn>
+        <name>Macbeth</name>
+        <author ref="a1"/>
+        <cover>Paperback</cover>
+        <details>
+            <genres> 
+                <genre>Drama</genre>
+                <genre>Historical Fiction</genre>
+            </genres>
+            <pages>108</pages>
+            <priceChange>9.99 8.79</priceChange>
+            <currency type="Euros"/>
+            <amount>5</amount>
+            <publicationdate>2020-06-14</publicationdate>
+        </details>
+        <comments>There is an audio book</comments>
+    </book>
+    <book>
+        <isbn identifier="ISBN-13">978-1774260395</isbn>
+        <name>Hamlet</name>
+        <author ref="a1"/>
+        <cover>Paperback</cover>
+        <details>
+            <genres> 
+                <genre>Drama</genre>
+                <genre>Historical Fiction</genre>
+            </genres>
+            <pages>172</pages>
+            <priceChange>8.55 9.99</priceChange>
+            <currency type="Euros"/>
+            <amount>15</amount>
+            <publicationdate>2020-11-24</publicationdate>
+        </details>    
+    </book>
+    <book>
+        <isbn identifier="ISBN-13">979-8651027460</isbn>
+        <name>A Midsummer Night's Dream</name>
+        Fantasy drama about faes
+        <author ref="a1"/>
+        <cover>Paperback</cover>
+        <details>
+            <genres> 
+                <genre>Drama</genre>
+                <genre>Fiction</genre>
+                <genre>Fantasy</genre>
+            </genres>
+            <pages>275</pages>
+            <priceChange>7.21 6.99</priceChange>
+            <currency type="Euros"/>
+            <amount>20</amount>
+            <publicationdate>2008-06-15</publicationdate>
+        </details>
+    </book>
+    <book>
+        <isbn identifier="ISBN-13">978-1444708158</isbn>
+        <name>The Dark Half</name>
+        <author ref="a2"/>
+        <cover>Hard cover</cover>
+        <details>
+            <genres> 
+                <genre>Horror</genre>
+                <genre>Fiction</genre>
+                <genre>Thriller</genre>
+            </genres>
+            <pages>480</pages>
+            <priceChange>9.79 15.85</priceChange>
+            <currency type="Euros"/>
+            <amount>6</amount>
+            <publicationdate>2011-11-10</publicationdate>
+        </details>
+    </book>
+    <book>
+        <isbn identifier="ISBN-13">978-1982103521</isbn>
+        <name>The Mist</name>
+        <author ref="a2"/>
+        <cover>Hard cover</cover>
+        <details>
+            <genres> 
+                <genre>Horror</genre>
+                <genre>Thriller</genre>
+                <genre>Fiction</genre>
+            </genres>
+            <pages>176</pages>
+            <priceChange>12.00 15.99</priceChange>
+            <currency type="Euros"/>
+            <amount>50</amount>
+            <publicationdate>2018-06-05</publicationdate>
+        </details>
+    </book>
+    <book>
+        <isbn identifier="ISBN-13">978-1444720686</isbn>
+        <name>Bag of Bones</name>
+        <author ref="a2"/>
+        <cover>Hard cover</cover>
+        <details>
+            <genres> 
+                <genre>Horror</genre>
+                <genre>Fiction</genre>
+                <genre>Thriller</genre>
+            </genres>
+            <pages>672</pages>
+            <priceChange>11.09 8.99 10.57</priceChange>
+            <currency type="Euros"/>
+            <amount>24</amount>
+            <publicationdate>2011-08-04</publicationdate>
+        </details>
+    </book>
+    <book>
+        <isbn identifier="ISBN-13">978-0393356182</isbn>
+        <name>Norse Mythology</name>
+        Collection of norse mythology and their gods.
+        <author ref="a3"/>
+        <cover>Paperback</cover>
+        <details>
+            <genres> 
+                <genre>Fantasy</genre>
+                <genre>Myth</genre>
+            </genres>
+            <pages>304</pages>
+            <priceChange>10.19 8.79 15.55</priceChange>
+            <currency type="Euros"/>
+            <amount>4</amount>
+            <publicationdate>2018-03-06</publicationdate>
+        </details>
+        <comments>There is an audio book</comments>
+    </book>
+    <book>
+        <isbn identifier="ISBN-13">978-1524796280</isbn>
+        <name>Fire and Blood</name>
+        <author ref="a5"/>
+        <cover>Hard Cover</cover>
+        <details>
+            <genres> 
+                <genre>Fantasy</genre>
+                <genre>Fiction</genre>
+            </genres>
+            <pages>736</pages>
+            <priceChange>27.99 30.99 36.58</priceChange>
+            <currency type="Dollars"/>
+            <amount>5</amount>
+            <publicationdate>2018-11-20</publicationdate>
+        </details>
+    </book>    
+    <book>
+        <isbn identifier="ISBN-13">978-0553103540</isbn>
+        <name>Game of Thrones</name>
+        <author ref="a5"/>
+        <cover>Hard Cover</cover>
+        <details>
+            <genres> 
+                <genre>Fantasy</genre>
+                <genre>Fiction</genre>
+            </genres>
+            <pages>694</pages>
+            <priceChange>31.49 35.99 30.49</priceChange>
+            <currency type="Dollars"/>
+            <amount>41</amount>
+            <publicationdate>1996-08-01</publicationdate>
+        </details>
+    </book>
+    <book>
+        <isbn identifier="ISBN-13">978-1648279195</isbn>
+        <name>Grandmaster of Demonic Cultivation</name>
+        A demonic cultivator tries to solve a murder.
+        <author ref="a4"/>
+        <cover>Paperback</cover>
+        <details>
+            <genres> 
+                <genre>Fantasy</genre>
+                <genre>Action</genre>
+            </genres>
+            <pages>396</pages>
+            <priceChange>14.99 18.99 16.99</priceChange>
+            <currency type="Euros"/>
+            <amount>4</amount>
+            <publicationdate>2021-12-14</publicationdate>
+        </details>
+    </book>
+    <book>
+        <isbn identifier="ISBN-13">978-1648279171</isbn>
+        <name>Heaven Official's Blessing</name>
+        A love story between a God and a  Ghost King.
+        <author ref="a4"/>
+        <cover>Paperback</cover>
+        <details>
+            <genres> 
+                <genre>Fantasy</genre>
+                <genre>Drama</genre>
+            </genres>
+            <pages>432</pages>
+            <priceChange>14.99 18.99 16.99</priceChange>
+            <currency type="Euros"/>
+            <amount>0</amount>
+            <publicationdate>2021-12-14</publicationdate>
+            <readingAge limit="Mature">16</readingAge>
+        </details>
+    </book>
+    <book> 
+        <isbn identifier="ISBN-13">978-1648279218</isbn>
+        <name>The Scum Villain's Self-Saving System</name>
+        A man transmigrated into old xianxia world
+        <author ref="a4"/>
+        <cover>Paperback</cover>
+        <details>
+            <genres> 
+                <genre>Fantasy</genre>
+                <genre>Comedy</genre>
+            </genres>
+            <pages>352</pages>
+            <priceChange>14.99 18.99 16.99</priceChange>
+            <currency type="Euros"/>
+            <amount>2</amount>
+            <publicationdate>2021-12-14</publicationdate>
+            <readingAge limit="Mature">16</readingAge>
+        </details>
+    </book> 
+    
+   <!--
+    <comics>
+        <isbn identifier="ISBN-13">979-8651027425</isbn>
+        <name>Macbeth</name>
+        <author ref="a3"/>    
+        <cover>Paperback</cover>
+        <details>
+            <genres> 
+                <genre>Drama</genre>
+                <genre>Historical Fiction</genre>
+            </genres>
+            <pages>108</pages>
+            <priceChange>9.99 8.79</priceChange>
+            <currency type="Euros"/>
+            <amount>5</amount>
+            <publicationdate>2020-06-14</publicationdate>
+            <readingAge limit="Mature">15</readingAge> 
+        </details>
+    </comics>
+    -->
+
+    <comics>
+        <isbn identifier="ISBN-13">978-1779515179</isbn>
+        <name>The Sandman</name>
+        <author ref="a3"/>
+        <cover>Illustrated paperback</cover>
+        <details>
+            <genres> 
+                <genre>Fantasy</genre>
+                <genre>Fiction</genre>
+            </genres>
+            <pages>560</pages>
+            <priceChange>20.99 15.99 17.99</priceChange>
+            <currency type="Euros"/>
+            <amount>7</amount>
+            <publicationdate>2022-04-12</publicationdate>
+            <readingAge limit="Mature">16</readingAge>
+        </details>
+    </comics>
+ </books>
+</Bookstore>

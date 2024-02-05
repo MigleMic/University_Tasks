@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+
+    "Author": {
+      "type": "object",
+      "properties": {
+          "id": {"type": "string", "pattern": "^[a-z]{1}[0-9]{1}$"},
+          "firstname": {"oneOf":[{"type": "string"},{"type":"null"}]},
+          "lastname": {"oneOf":[{"type": "string"},{"type":"null"}]}
+      },
+          "required": ["id","firstname","lastname","pseudonym"]},
+
+      "Book": {
+        "type": "object",
+        "properties": {
+            "identifier": {"type":"string"},
+            "isbn": {"type": "string", "pattern": "^[0-9]{3}[-][0-9]{10}$"},
+            "name": {"type": "string", "maxLength": 50},
+            "author": {"type": "string", "pattern": "^[a-z]{1}[0-9]{1}$"},
+            "cover": {"type":"string"},
+            "details": {
+              "type": "object",
+            "properties": {
+            "genre": {
+                "type": "array",
+                "items": {"type": "string"}
+            },
+            "pages": {"type": "integer", "minimum": 100},
+            "price": {"type": "number"},
+            "currency": {"type": "string", "enum": ["Euros","Dollars"]},
+            "amount": {"type": "integer"},
+            "publicationdate": {"type": "string","format": "date"},
+            "readingAgeLimit": {
+                "properties": {
+                    "limit": {"type": "string"},
+                    "age": {"type": "integer", "minimum": 14, "maximum": 18, "exclusiveMaximum": true}
+                }
+            }
+        },
+        "required": ["genre","pages","price", "currency","amount", "publicationdate"]
+            }
+        },
+        "required": [ "isbn", "name", "author","cover","details"]
+    },     
+
+    "ShortBookType":{
+        "type": "object",
+        "properties": {
+          "isbn": {"type":"string","pattern":"^[0-9]{3}[-][0-9]{10}$"},
+          "name":{"type":"string"},
+          "author":{"type":"string", "pattern": "^[a-z]{1}[0-9]{1}$"},
+          "details":{
+            "type":"object",
+            "properties":{
+              "price": {"type": "number"},
+              "currency": {"type": "string", "enum": ["Euros","Dollars"]}
+            },
+            "required":["price", "currency"]
+          }
+        },
+        "required": [ "isbn", "name", "author","details"]
+    }
+    },
+
+    "type":"object",  
+    "properties":{
+    "Bookstore": {
+          "type": "object",
+          "properties": {
+              "authors": {
+                  "type": "array",
+                  "items": {
+                    "allOf":[
+                      {"$ref": "#/definitions/Author"},
+                      {
+                        "properties": {"pseudonym": {"oneOf":[{"type": "string"},{"type":"null"}]}},
+                        "required": ["pseudonym"]
+                      }]
+                  },
+                  "minItems": 1
+              },
+              "books": {
+                  "type": "array",
+                  "items": {
+                      "anyOf":[
+                        {"$ref": "#/definitions/Book"},
+                        {"$ref": "#/definitions/ShortBookType"}
+                      ]
+                  },
+                  "minItems": 1
+              }
+          },
+          "required": ["authors","books"]
+      }
+  },
+  "required": ["Bookstore"]
+}

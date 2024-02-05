@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+targetNamespace="https://www.amazon.de" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:mano="https://www.amazon.de">
+    <xs:element name="Bookstore" type="mano:BookstoreType">
+        <xs:key name="authorId">
+            <xs:selector xpath="mano:authors/mano:author"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:keyref name="ReferenceToAuthorId" refer="mano:authorId">
+            <xs:selector xpath="mano:books/mano:book/mano:author"/>
+            <xs:field xpath="@ref"/>
+        </xs:keyref>
+    </xs:element>
+
+    <xs:complexType name= "BookstoreType">
+        <xs:sequence>
+            <xs:element name="authors" type="mano:authorsType"/>
+            <xs:element name="books" type="mano:booksType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="authorsType">
+        <xs:sequence>
+            <xs:element name="author" type="mano:authorType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>    
+    </xs:complexType>
+
+    <xs:complexType name="authorwithAttributeType">
+        <xs:choice>
+            <xs:sequence>
+                <xs:element name="firstname" type="xs:string"/>
+                <xs:element name="lastname" type="xs:string"/>  
+            </xs:sequence>
+            <xs:element name="pseudonym" type="xs:string"/>
+        </xs:choice>    
+        <xs:attribute name="id" type="mano:authorIdType"/>
+    </xs:complexType>         
+
+    <xs:complexType name="authorType">
+        <xs:complexContent>
+            <xs:extension base="mano:authorwithAttributeType">
+                <xs:sequence>
+                    <xs:element name="dead" type="xs:boolean" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="authorIdType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="booksType">
+        <xs:sequence>
+            <xs:element name="book" type="mano:bookType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="comics" type="mano:comicsType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="bookType" mixed="true">
+        <xs:sequence>
+            <xs:element name="isbn" type="mano:isbnAttributeType"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="author" type="mano:bookAuthorType"/>
+            <xs:element name="cover" type="xs:string"/>
+            <xs:element name="details" type="mano:bookDetailsType"/>
+            <xs:element name="comments" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="comicsType">
+        <xs:complexContent>
+            <xs:restriction base="mano:bookType"> 
+                <xs:sequence> 
+                    <xs:element name="isbn" type="mano:isbnAttributeType"/>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="author" type="mano:bookAuthorType"/>
+                    <xs:element name="cover" type="xs:string" fixed="Illustrated paperback"/>
+                    <xs:element name="details" type="mano:bookDetailsType"/>
+                </xs:sequence>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType> 
+
+    <xs:simpleType name="isbnType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{3}[-][0-9]{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="isbnAttributeType">
+        <xs:simpleContent>
+            <xs:extension base="mano:isbnType"> 
+                <xs:attribute name="identifier" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="bookAuthorType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="ref" type="mano:authorIdType"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="bookDetailsType"> 
+         <xs:sequence>
+            <xs:element name="genres" type="mano:genresType"/>
+            <xs:element name="pages" type="xs:integer"/>
+            <xs:element name="priceChange" type="mano:priceChangeList"/>
+            <xs:element name="currency" type="mano:currencyType"/>
+            <xs:element name="amount" type="xs:integer"/>
+            <xs:element name="publicationdate" type="xs:date"/>
+            <xs:element name="readingAge" type="mano:readingAgeType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType> 
+
+    <xs:complexType name="ageType"> 
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="limit" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="readingAgeType"> 
+        <xs:simpleContent>
+            <xs:restriction base="mano:ageType">
+                <xs:minInclusive value="5"/>
+                <xs:maxInclusive value="18"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="priceChangeList">
+        <xs:list itemType="xs:decimal"/>
+    </xs:simpleType>
+    
+    <xs:complexType name="genresType">
+        <xs:sequence>
+                <xs:element name="genre" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+   </xs:complexType>
+
+    <xs:complexType name="currencyType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type" type="mano:currencyEnum"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="currencyEnum">
+        <xs:restriction base="xs:string">
+                <xs:enumeration value="Dollars"/>
+                <xs:enumeration value="Euros"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>    
