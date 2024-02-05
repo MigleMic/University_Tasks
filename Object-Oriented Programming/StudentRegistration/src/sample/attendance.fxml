@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AttendanceController">
+   <children>
+      <AnchorPane prefHeight="97.0" prefWidth="600.0" style="-fx-background-color: #B11647;">
+         <children>
+            <Label layoutX="171.0" layoutY="29.0" prefHeight="18.0" prefWidth="258.0" text="Pažymėti lankomumą" textFill="#e4cccc">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="81.0" layoutY="137.0" text="Pasirinkite asmnenį" textFill="#ffd9d9" />
+      <Label layoutX="81.0" layoutY="191.0" prefHeight="18.0" prefWidth="102.0" text="Pasirinkite dalyką" textFill="#ffd4d4" />
+      <Label layoutX="81.0" layoutY="244.0" prefHeight="18.0" prefWidth="102.0" text="Pasirinkite datą" textFill="#ffe1e1" />
+      <ChoiceBox fx:id="chooseStudentBox" layoutX="227.0" layoutY="132.0" prefHeight="26.0" prefWidth="268.0" />
+      <ChoiceBox fx:id="chooseSubjectBox" layoutX="227.0" layoutY="187.0" prefHeight="26.0" prefWidth="268.0" />
+      <DatePicker fx:id="dateChooser" layoutX="227.0" layoutY="241.0" prefHeight="26.0" prefWidth="276.0" />
+      <Button fx:id="addButton" layoutX="239.0" layoutY="295.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #B11647;" text="Pridėti" textFill="#ffe5e5" />
+      <Button fx:id="leaveButton" layoutX="238.0" layoutY="342.0" mnemonicParsing="false" onAction="#leaveButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #B11647;" text="Išeiti" textFill="#ffdbdb" />
+   </children>
+</AnchorPane>

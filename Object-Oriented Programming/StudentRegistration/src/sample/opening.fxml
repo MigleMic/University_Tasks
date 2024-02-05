@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #001000;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OpeningController">
+   <children>
+      <Label layoutX="208.0" layoutY="32.0" prefHeight="46.0" prefWidth="188.0" text="  Pradžios puslapis" textAlignment="CENTER" textFill="#f7c2c2">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="newUserButton" layoutX="200.0" layoutY="101.0" mnemonicParsing="false" onAction="#newUserButtonOnAction" prefHeight="46.0" prefWidth="204.0" style="-fx-background-color: #B11647;" text="Pridėti naują vartotoją " textFill="#ffcfcf" />
+      <Button fx:id="attendanceButton" layoutX="200.0" layoutY="166.0" mnemonicParsing="false" onAction="#attendanceButtonOnAction" prefHeight="46.0" prefWidth="204.0" style="-fx-background-color: #B11647;" text="Pridėti lankomumą" textFill="#ffe3e3" />
+      <Button fx:id="monthlyAttendanceButton" layoutX="200.0" layoutY="235.0" mnemonicParsing="false" onAction="#monthlyAttendanceButtonOnAction" prefHeight="46.0" prefWidth="204.0" style="-fx-background-color: #B11647;" text="Mėnesio lankomumas" textFill="#ffdddd" />
+      <Button fx:id="cancelButton" layoutX="279.0" layoutY="314.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" style="-fx-background-color: #B11647;" text="Išeiti" textFill="#ffd9d9" />
+   </children>
+</AnchorPane>
